@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/andzerotoxmac/Documents/MAUI/RandomApi/RandomApiUser/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/andzerotoxmac/Documents/MAUI/RandomApi/RandomApiUser/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/RandomApiUser.app

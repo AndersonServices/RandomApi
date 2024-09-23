@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RandomApiUser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1ecca8a0428fca81b48a3271f8c01f6d803b0380")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e62cd184828444a98137fe5955ef20caecd5a8b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RandomApiUser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RandomApiUser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

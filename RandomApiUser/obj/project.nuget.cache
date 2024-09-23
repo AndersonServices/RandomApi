@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UdLUI9feedE=",
+  "dgSpecHash": "0l9LaBgwadE=",
   "success": true,
   "projectFilePath": "/Users/andzerotoxmac/Documents/MAUI/RandomApi/RandomApiUser/RandomApiUser.csproj",
   "expectedPackageFiles": [
@@ -113,7 +113,7 @@
       "code": "NU1900",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Error al obtener los datos de vulnerabilidad del paquete: Access to the path '/Users/andzerotoxmac/.local/share' is denied."
+      "message": "Error occurred while getting package vulnerability data: Access to the path '/Users/andzerotoxmac/.local/share' is denied."
     }
   ]
 }

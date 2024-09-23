@@ -1,6 +1,6 @@
 ﻿using RandomApiUser.ViewModels;
 
-namespace RandomApiUser;
+namespace RandomApiUser.Views;
 
 public partial class MainPage : ContentPage
 {
