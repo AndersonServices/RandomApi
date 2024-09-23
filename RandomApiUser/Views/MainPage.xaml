@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RandomApiUser.Views.MainPage"
+             Title="">
+
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Image
+            Source="api.png"
+            Scale="0.4"/>
+
+        <Button
+            Text="Ver listado de Usuarios" 
+            FontSize="16"
+            TextColor="White"
+            BorderColor="#1588df"
+            Background="#1588df"
+            BorderWidth="1"
+            Command="{Binding VerListadoCommand}"
+            HorizontalOptions="Center"/>
+
+        <Label
+            Text="Aplicación desarrollada por"
+            FontAttributes="Italic"
+            FontFamily="Italic"
+            VerticalOptions="EndAndExpand"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="CenterAndExpand"/>
+        <Label
+            Text="Anderson Becerra"
+            FontAttributes="Bold"
+            FontFamily="Bold"
+            VerticalOptions="End"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RandomApiUser.Views.UserDetails"
+             Title="{Binding UserSeleccionado.FirstName}">
+
+     <VerticalStackLayout BindingContext="{Binding UserSeleccionado}" Margin="10"> 
+        <Border 
+            Stroke="LightBlue"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 90,90,90,90"
+            HorizontalOptions="Center">            
+            <Image
+                Source="{Binding Avatar}"
+                Aspect="AspectFill"
+                HeightRequest="150"
+                WidthRequest="150" 
+                Margin="8"/>
+        </Border>
+        <Label 
+            Text="{Binding EmploymentUser.Title}"
+            TextColor="#2346A9"
+            FontAttributes="Bold"
+            FontFamily="Bold"
+            FontSize="Medium"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Frame BorderColor="Transparent"/>
+        
+        <Label Margin="0,5,0,5" 
+            Text="Datos Personales"
+            TextColor="#2346A9"
+            FontAttributes="Bold"
+            FontFamily="Bold"
+            FontSize="16"/>
+        
+        <Border 
+            Stroke="LightBlue"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10,10,10,10">
+            <StackLayout>  
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">        
+                    <Label Text="Nombre:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label FontSize="16">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} {1}">
+                                <Binding Path="FirstName" />
+                                <Binding Path="LastName" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                </HorizontalStackLayout>  
+
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Text="Contraseña:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding Password, StringFormat='*********'}"             
+                        FontSize="16"/>                
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Text="Email:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding Email}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Text="Género:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding Gender}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Text="Teléfono:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding PhoneNumber}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Text="Fecha de nacimiento:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding DateOfBirth}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Border>
+
+        <Label Margin="0,5,0,5" 
+            Text="Dirección"
+            TextColor="#2346A9"
+            FontAttributes="Bold"
+            FontFamily="Bold"
+            FontSize="16"/>
+
+        <Border 
+            Stroke="LightBlue"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10,10,10,10">
+            <StackLayout>  
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Margin="10,0,0,0" 
+                        Text="País:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding AddressUser.Country}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>    
+                    
+                    <Label Text="Estado:"
+                            FontAttributes="Bold"
+                            FontFamily="Bold"
+                            FontSize="16"/>
+                    <Label Text="{Binding AddressUser.State}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>               
+                </HorizontalStackLayout>  
+
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Margin="10,0,0,0" 
+                        Text="Código Postal:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="{Binding AddressUser.ZipCode}"
+                        FontAttributes="Bold"
+                        FontSize="16"/>                 
+                </HorizontalStackLayout>  
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Margin="10,0,0,0" 
+                        Text="Calle:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label FontAttributes="Bold"
+                        FontSize="16">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{} {0}, {1}">
+                                <Binding Path="AddressUser.StreetName"/>
+                                <Binding Path="AddressUser.StreetAddress"/>
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>         
+                </HorizontalStackLayout>  
+                
+                <HorizontalStackLayout Margin="10,5,10,5" Spacing="10">
+                    <Label Text="Tarjeta de Crédito:"
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="16"/>
+                    <Label Text="**** - **** - **** - ****"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Border>
+
+        <Label
+            Margin="0,5,0,5" 
+            Text="Suscripcción"
+            TextColor="#2346A9"
+            FontAttributes="Bold"
+            FontFamily="Bold"
+            FontSize="16"/>
+
+        <Border 
+            Stroke="LightBlue"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10,10,10,10">
+            
+            <Grid Margin="10,5,10,5" RowSpacing="10" ColumnSpacing="5"> 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0"
+                    Text="Plan:"
+                    FontAttributes="Bold"
+                    FontFamily="Bold"
+                    FontSize="16"/>
+                <Label Grid.Column="1" Grid.Row="0" 
+                    Text="{Binding SubscriptionUser.Plan}"
+                    FontAttributes="Bold"
+                    FontSize="16"/>    
+                
+                <Label Grid.Column="2" Grid.Row="0" 
+                    Text="Status:"
+                    FontAttributes="Bold"
+                    FontFamily="Bold"
+                    FontSize="16"/>
+                <Label Grid.Column="3" Grid.Row="0"
+                    Text="{Binding SubscriptionUser.Status}"
+                    FontAttributes="Bold"
+                    FontSize="16" />  
+
+                <Label Grid.Column="0" Grid.Row="1"
+                    Text="Método:"
+                    FontAttributes="Bold"
+                    FontFamily="Bold"
+                    FontSize="16"/>
+                <Label Grid.Column="1" Grid.Row="1"
+                    Text="{Binding SubscriptionUser.PaymentMethod}"
+                    FontAttributes="Bold"
+                    FontSize="16" /> 
+                <Label Grid.Column="2" Grid.Row="1"
+                    Text="Términos:"
+                    FontAttributes="Bold"
+                    FontFamily="Bold"
+                    FontSize="16"/>
+                <Label Grid.Column="3" Grid.Row="1"
+                    Text="{Binding SubscriptionUser.Term}"
+                    FontAttributes="Bold"
+                    FontSize="16" />   
+            </Grid>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

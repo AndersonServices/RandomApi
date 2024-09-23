@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using RandomApiUser.Models;
+using RandomApiUser.Services;
+using RandomApiUser.Views;
 
 namespace RandomApiUser.ViewModels;
 
